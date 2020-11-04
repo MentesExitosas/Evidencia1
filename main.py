@@ -3,7 +3,6 @@ import sys
 import shutil
 
 listaVacia = []
-tuplaVacia = []
 
 opcion = 0
 while opcion != 9:
@@ -66,10 +65,13 @@ while opcion != 9:
                 valorCount = input("Qué valor deseas saber cuantas veces se repite en la lista? \n")
                 print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
         elif opcion == 5:
-            elementostupla= int(input("¿Cuántos elementos quieres agregar? "))
-            for valor in range(elementostupla):
-                valoragregado = input("¿Mencione el valor? ")
-                tuplaVacia.append(valoragregado)
-            print(tuple(tuplaVacia))
+            tupla = tuple(listaVacia)
+            print(tupla)
+            print("1.Saber ubicación del elemento \n 2.Saber número de repeticiones de un valor. \n")
+            opcionsub = int(input("Selecione una opción: "))
+            if opcionsub == 1:
+                print(tupla)
+                opcionindex = input('\nDe cual elemento de la tupla desea saber su posicion :')
+                print(f'La posicion del elemento es : {tupla.index(opcionindex)}')
     except Exception:   
         print(f"Ocurrió un error {sys.exc_info()[0]}")
