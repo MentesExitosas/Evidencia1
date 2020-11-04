@@ -7,3 +7,7 @@ opcion = int(input("Opción: "))
 
 if opcion == 1:
     print(f"El directorio de trabajo actual es: {os.getcwd()}")
+elif opcion == 2:
+    directorioInicial = input("Dime la ruta del directorio donde se encuentra el archivo")
+    directorioFinal = input("Dime la ruta de a donde se va a clonar el archivo")
+    shutil.copyfile(directorioInicial, directorioFinal)
