@@ -5,10 +5,10 @@ import shutil
 listaVacia = []
 
 opcion = 1
-while opcion >= 1 and opcion <9:
+while opcion >= 1 and opcion <5:
 
     print("Bienvenido al clonador de archivos y organizador de listas y tuplas\n")
-    print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Tuplas\n 9. Salir")
+    print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Salir")
     opcion = int(input("\nOpción: "))
 
 
@@ -65,14 +65,8 @@ while opcion >= 1 and opcion <9:
                 print(listaVacia)
                 valorCount = input("Qué valor deseas saber cuantas veces se repite en la lista? \n")
                 print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
-        elif opcion == 5:
+            print('Se convertirá la lista a tupla: ')
             tupla = tuple(listaVacia)
-            print(tupla)
-            print("1.Saber ubicación del elemento \n 2.Saber número de repeticiones de un valor. \n")
-            opcionsub = int(input("Selecione una opción: "))
-            if opcionsub == 1:
-                print(tupla)
-                opcionindex = input('\nDe cual elemento de la tupla desea saber su posicion :')
-                print(f'La posicion del elemento es : {tupla.index(opcionindex)}')
+            print(f' El peso de la lista {listaVacia} es: {sys.getsizeof(listaVacia)} bytes y el peso de la tupla {tupla} es: {sys.getsizeof(tupla)} bytes')
     except Exception:   
         print(f"Ocurrió un error {sys.exc_info()[0]}")
