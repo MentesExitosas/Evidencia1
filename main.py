@@ -29,7 +29,7 @@ try:
             listaVacia.append(elementosLista)
         print("\nLISTA TERMINADA")
         print(listaVacia)
-        print('\nSelecciona una opcion:\n 1.Saber posición de un elemento en la lista\n 2.Inserta un elemento en la lista según el índice deseado\n 3.Eliminar elemento de la lista\n 4.Ejecutar la función pop en la lista\n 5.Ordenar los elementos de la lista utilizando sort \n 6. Verificar cuantas veces se repite un valor de la lista')
+        print('\nSelecciona una opcion:\n 1. Saber posición de un elemento en la lista\n 2. Inserta un elemento en la lista según el índice deseado\n 3. Eliminar elemento de la lista\n 4. Ejecutar la función pop en la lista\n 5. Ordenar los elementos de la lista utilizando sort \n 6. Verificar cuantas veces se repite un valor de la lista')
         opcionsub = int(input(' \nSeleccion SubMenu de Listas: '))
         if opcionsub == 1:
             print(listaVacia)
@@ -49,13 +49,13 @@ try:
         if opcionsub ==4:
             print("\n")
             print(listaVacia)
-            print(listaVacia.pop())
-            print(listaVacia)
+            print(f"El elemento a eliminar es: {listaVacia.pop()}")
+            print(f"La lista actualizada es: {listaVacia}")
         if opcionsub ==5:
             print("\n")
             print(listaVacia)
             listaVacia.sort()
-            print(listaVacia)
+            print(f"La lista ordenada es: {listaVacia}")
         if opcionsub == 6:
             print("\n")
             print(listaVacia)
