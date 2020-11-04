@@ -4,8 +4,9 @@ import shutil
 
 listaVacia = []
 
-opcion = 0
-while opcion != 9:
+opcion = 1
+while opcion >= 1 and opcion <9:
+
     print("Bienvenido al clonador de archivos y organizador de listas y tuplas\n")
     print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Tuplas\n 9. Salir")
     opcion = int(input("\nOpción: "))
