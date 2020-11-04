@@ -11,16 +11,17 @@ opcion = int(input("Opción: "))
 try:
     if opcion == 1:
         print(f"El directorio de trabajo actual es: {os.getcwd()}")
+        print(f"El peso del objeto es: {sys.getsizeof(os.getcwd())} bytes")
     elif opcion == 2:
         directorioInicial = input("Dime la ruta del directorio donde se encuentra el archivo que quieres copiar:\n")
         directorioFinal = input("Dime la ruta de a donde se va a copiar el archivo:\n")
         shutil.copy(directorioInicial, directorioFinal)
-        print(f'El peso del objeto es: ' {sys.getsizeof(directorioInicial)} ' bytes')
+        print(f"El peso del objeto es: {sys.getsizeof(directorioInicial)} bytes")
     elif opcion == 3:
         directorioInicial = input("Dime la ruta del directorio donde se encuentra el archivo que quiere mover:\n")
         directorioFinal = input("Dime la ruta de a donde se va a mover el archivo:\n")
         shutil.move(directorioInicial, directorioFinal)
-        print(f'El peso del objeto es: ' {sys.getsizeof(directorioInicial)} ' bytes')
+        print(f"El peso del objeto es: {sys.getsizeof(directorioInicial)} bytes")
     elif opcion == 4:
         elementosLista = int(input('Cuantos elementos desea agregar: '))
         for elemento in range(elementosLista):
