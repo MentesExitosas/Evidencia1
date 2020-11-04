@@ -69,6 +69,19 @@ while opcion >= 1 and opcion <5:
                     print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
             print('Se convertirá la lista a tupla: ')
             tupla = tuple(listaVacia)
+            print(tupla)
+            opcionsub2 = 1
+            while opcionsub2 >= 1 and opcionsub2 < 3:
+                print("Seleccione una opción: \n1. Ubicar un elemento\n2. Contar repeticiones de un elemento\n3. Salir\n")
+                opcionsub2 = int(input("Seleccione una opción del menú: "))
+                if opcionsub2 == 1:
+                    print(tupla)
+                    opcionindex = input('\n¿De cuál elemento de la tupla desea saber su posicion? ')
+                    print(f'La posición del elemento es: {tupla.index(opcionindex)}')  
+                if opcionsub2 == 2: 
+                    print(listaVacia)
+                    valorCount = input("¿Qué valor deseas saber cuantas veces se repite en la tupla? \n")
+                    print(f"El valor {valorCount} se repite {tupla.count(valorCount)} veces")     
             print(f' El peso de la lista {listaVacia} es: {sys.getsizeof(listaVacia)} bytes y el peso de la tupla {tupla} es: {sys.getsizeof(tupla)} bytes')
     except Exception:   
         print(f"Ocurrió un error {sys.exc_info()[0]}")
