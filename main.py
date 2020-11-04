@@ -2,7 +2,7 @@ import os
 import shutil
 
 print("Bienvenido al clonador de archivos")
-print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo de un directorio a otro\n")
+print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n3. Mover un archivo o directorio a otro lugar")
 opcion = int(input("Opción: "))
 
 if opcion == 1:
