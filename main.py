@@ -7,8 +7,8 @@ listaVacia = []
 opcion = 1
 while opcion >= 1 and opcion <5:
 
-    print("Bienvenido al clonador de archivos y organizador de listas y tuplas\n")
-    print("Selecciona una opción:\n 1. Ver en qué directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Salir")
+    print("Bienvenido al programa de operaciones básicas de las estructuras de datos y su procesamiento \n")
+    print("Selecciona una opción:\n 1. Ver en qué directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas a tuplas\n 5. Salir")
     opcion = int(input("\nOpción: "))
 
 
