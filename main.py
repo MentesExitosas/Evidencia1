@@ -28,7 +28,7 @@ try:
             elementosLista = (input('Cuales numeros vas a agregar? : '))
             listaVacia.append(elementosLista)
         print(listaVacia)
-        print('Selecciona una opcion:\n 1.Saber posicion de un elemento en la lista\n 2.Inserta un elemento en la lista según el indicie deseado\n 3.Eliminar elemento de la lista ')
+        print('Selecciona una opcion:\n 1.Saber posicion de un elemento en la lista\n 2.Inserta un elemento en la lista según el indicie deseado\n 3.Eliminar elemento de la lista\n 4.Ejecutar la función pop en la lista ')
         opcionsub = int(input(' Seleccion SubMenu de Listas: '))
         if opcionsub == 1:
             print(listaVacia)
@@ -44,6 +44,10 @@ try:
             print(listaVacia)
             opcionremoveelemento = input('Escriba el elemento a eliminar: ')
             listaVacia.remove(opcionremoveelemento)
+            print(listaVacia)
+        if opcionsub ==4:
+            print(listaVacia)
+            print(listaVacia.pop())
             print(listaVacia)
 except Exception:
     print(f"Ocurrió un error {sys.exc_info()[0]}")
