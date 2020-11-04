@@ -61,5 +61,7 @@ try:
             print(listaVacia)
             valorCount = input("Qué valor deseas saber cuantas veces se repite en la lista? \n")
             print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
+
+
 except Exception:   
     print(f"Ocurrió un error {sys.exc_info()[0]}")
