@@ -30,6 +30,12 @@ try:
         if opcionsub == 1:
             print(listaVacia)
             opcionindex = input('De cual elemento de la lista desea saber su posicion :')
-            print(f'La posicion del elemento es : {listaVacia.index(opcionindex)}')        
+            print(f'La posicion del elemento es : {listaVacia.index(opcionindex)}')
+        if opcionsub == 2:
+            print(listaVacia)
+            opcioninsertnumero = int(input('En que posicion desea agregar : '))
+            opcioninsertelemento = input('Cual elemento deseas agregar : ')
+            listaVacia.insert(opcioninsertnumero, opcioninsertelemento)   
+            print(listaVacia)   
 except Exception:
     print(f"Ocurrió un error {sys.exc_info()[0]}")
