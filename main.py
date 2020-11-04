@@ -8,7 +8,7 @@ opcion = 1
 while opcion >= 1 and opcion <5:
 
     print("Bienvenido al clonador de archivos y organizador de listas y tuplas\n")
-    print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Salir")
+    print("Selecciona una opción:\n 1. Ver en qué directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Salir")
     opcion = int(input("\nOpción: "))
 
 
@@ -35,15 +35,15 @@ while opcion >= 1 and opcion <5:
             print(listaVacia)
             opcionsub = 1
             while opcionsub >= 1 and opcionsub < 7:
-                print('\nSelecciona una opcion:\n 1. Saber la posición de un elemento en la lista\n 2. Inserta un elemento en la lista según el índice deseado\n 3. Eliminar elemento de la lista\n 4. Ejecutar la función pop en la lista\n 5. Ordenar los elementos de la lista utilizando sort \n 6. Verificar cuantas veces se repite un valor de la lista \n 7.Salir')
-                opcionsub = int(input(' \nSeleccion SubMenu de Listas: '))
+                print('\nSelecciona una opción:\n 1. Saber la posición de un elemento en la lista\n 2. Inserta un elemento en la lista según el índice deseado\n 3. Eliminar elemento de la lista\n 4. Ejecutar la función pop en la lista\n 5. Ordenar los elementos de la lista utilizando sort \n 6. Verificar cuántas veces se repite un valor de la lista \n 7. Salir')
+                opcionsub = int(input(' \nSelección SubMenú de Listas: '))
                 if opcionsub == 1:
                     print(listaVacia)
-                    opcionindex = input('\n¿De cuál elemento de la lista desea saber su posicion? ')
-                    print(f'La posicion del elemento es: {listaVacia.index(opcionindex)}')
+                    opcionindex = input('\n¿De cuál elemento de la lista desea saber su posición? ')
+                    print(f'La posición del elemento es: {listaVacia.index(opcionindex)}')
                 if opcionsub == 2:
                     print(listaVacia)
-                    opcioninsertnumero = int(input('\n¿En qué posicion desea agregar? '))
+                    opcioninsertnumero = int(input('\n¿En qué posición desea agregar? '))
                     opcioninsertelemento = input('¿Cuál elemento deseas agregar? ')
                     listaVacia.insert(opcioninsertnumero, opcioninsertelemento)   
                     print(listaVacia) 
@@ -65,22 +65,22 @@ while opcion >= 1 and opcion <5:
                 if opcionsub == 6:
                     print("\n")
                     print(listaVacia)
-                    valorCount = input("¿Qué valor deseas saber cuantas veces se repite en la lista? \n")
+                    valorCount = input("¿Qué valor deseas saber cuántas veces se repite en la lista? \n")
                     print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
             print('Se convertirá la lista a tupla: ')
             tupla = tuple(listaVacia)
             print(tupla)
             opcionsub2 = 1
             while opcionsub2 >= 1 and opcionsub2 < 3:
-                print("Seleccione una opción: \n1. Ubicar un elemento\n2. Contar repeticiones de un elemento\n3. Salir\n")
+                print("Seleccione una opción: \n1. Ubicar un elemento\n2. Contar las repeticiones de un elemento\n3. Salir\n")
                 opcionsub2 = int(input("Seleccione una opción del menú: "))
                 if opcionsub2 == 1:
                     print(tupla)
-                    opcionindex = input('\n¿De cuál elemento de la tupla desea saber su posicion? ')
+                    opcionindex = input('\n¿De cuál elemento de la tupla desea saber su posición? ')
                     print(f'La posición del elemento es: {tupla.index(opcionindex)}')  
                 if opcionsub2 == 2: 
                     print(listaVacia)
-                    valorCount = input("¿Qué valor deseas saber cuantas veces se repite en la tupla? \n")
+                    valorCount = input("¿Qué valor deseas saber cuántas veces se repite en la tupla? \n")
                     print(f"El valor {valorCount} se repite {tupla.count(valorCount)} veces")     
             print(f' El peso de la lista {listaVacia} es: {sys.getsizeof(listaVacia)} bytes y el peso de la tupla {tupla} es: {sys.getsizeof(tupla)} bytes')
     except Exception:   
