@@ -3,6 +3,7 @@ import sys
 import shutil
 
 listaVacia = []
+tuplaVacia = []
 print("Bienvenido al clonador de archivos y organizador de listas y tuplas\n")
 print("Selecciona una opción:\n 1. Ver en que directorio estoy\n 2. Clonar un archivo o directorio a otro lugar\n 3. Mover un archivo o directorio a otro lugar\n 4. Listas\n 5. Tuplas")
 opcion = int(input("\nOpción: "))
@@ -61,7 +62,11 @@ try:
             print(listaVacia)
             valorCount = input("Qué valor deseas saber cuantas veces se repite en la lista? \n")
             print(f"El valor {valorCount} se repite {listaVacia.count(valorCount)} veces")
-
-
+    elif opcion == 5:
+        elementostupla= int(input("¿Cuántos elementos quieres agregar? "))
+        for valor in range(elementostupla):
+            valoragregado = input("¿Mencione el valor? ")
+            tuplaVacia.append(valoragregado)
+        print(tuple(tuplaVacia))
 except Exception:   
     print(f"Ocurrió un error {sys.exc_info()[0]}")
