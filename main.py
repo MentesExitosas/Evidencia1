@@ -20,14 +20,16 @@ try:
         directorioFinal = input("Dime la ruta de a donde se va a mover el archivo:\n")
         shutil.move(directorioInicial, directorioFinal)
     elif opcion == 4:
-        print('Selecciona una opcion:\n 1.Agregar Valores a Lista\n 2.Saber posicion de un elemento en la lista\n 3.Inserta un elemento en la lista según el indicie deseado ')
+        elementosLista = int(input('Cuantos elementos desea agregar: '))
+        for elemento in range(elementosLista):
+            elementosLista = (input('Cuales numeros vas a agregar? : '))
+            listaVacia.append(elementosLista)
+        print(listaVacia)
+        print('Selecciona una opcion:\n 1.Saber posicion de un elemento en la lista\n 2.Inserta un elemento en la lista según el indicie deseado ')
         opcionsub = int(input(' Seleccion SubMenu de Listas: '))
         if opcionsub == 1:
-            elementosLista = int(input('Cuantos elementos desea agregar: '))
-            for elemento in range(elementosLista):
-                elementosLista = (input('Cuales numeros vas a agregar? : '))
-                listaVacia.append(elementosLista)
             print(listaVacia)
-        
+            opcionindex = input('De cual elemento de la lista desea saber su posicion :')
+            print(f'La posicion del elemento es : {listaVacia.index(opcionindex)}')        
 except Exception:
     print(f"Ocurrió un error {sys.exc_info()[0]}")
