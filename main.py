@@ -10,4 +10,4 @@ if opcion == 1:
 elif opcion == 2:
     directorioInicial = input("Dime la ruta del directorio donde se encuentra el archivo")
     directorioFinal = input("Dime la ruta de a donde se va a clonar el archivo")
-    shutil.copyfile(directorioInicial, directorioFinal)
+    shutil.copy(directorioInicial, directorioFinal)
